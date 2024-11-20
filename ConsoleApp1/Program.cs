@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Linq;
 
-namespace Hochregallager
+namespace Hochregallager1
 {
     internal class Program
     {
