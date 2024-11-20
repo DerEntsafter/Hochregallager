@@ -14,8 +14,19 @@ namespace Hochregallager
             // string IDPak = Console.ReadLine();
             string IDPak = "1:2:7:1234";                   
             Console.WriteLine("Bitte geben Sie die Größe des Paketes an (1/2/3)");
-            //string groesse = Console.ReadLine();
-            string groesse = "3";
+            string groessestr = Console.ReadLine();
+            int groesse = int.Parse(groessestr);
+
+           
+            while (groesse < 1 || groesse > 4)
+            {
+                groesse = 0;
+                Console.WriteLine("Die Größe MUSS 1 bis 3 sein");
+                groessestr = Console.ReadLine();
+                groesse = int.Parse(groessestr);
+
+            }
+
             //Initialisierung der 2 Regale, 2 Ebenen, 20 Fächern und 4 Segmenten
             List<Regal> regale = new List<Regal>();
             for(int i = 1; i < 3; i++)
